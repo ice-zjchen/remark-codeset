@@ -1,0 +1,14 @@
+{
+  "name": "remark-codeset-core",
+  "version": "1.0.0",
+  "repository": "https://github.com/ice-zjchen/remark-codeset.git",
+  "main": "index.js",
+  "author": "ice-zjchen",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.15",
+    "unist-util-visit": "^2.0.0"
+  }
+}
