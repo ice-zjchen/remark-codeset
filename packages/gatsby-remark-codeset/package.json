@@ -1,14 +1,19 @@
 {
   "name": "gatsby-remark-codeset",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "repository": "https://github.com/ice-zjchen/remark-codeset.git",
   "main": "index.js",
   "author": "ice-zjchen",
-  "keywords": ["gatsby", "gatsby-plugin", "remark", "remark-plugin"],
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "remark",
+    "remark-plugin"
+  ],
   "description": "parse sets of code blocks in markdown and transform them to tablist",
   "license": "MIT",
   "dependencies": {
-    "remark-codeset-core": "^1.0.1"
+    "remark-codeset-core": "^1.0.2"
   },
   "peerDependencies": {
     "gatsby": "^2.15.16",
