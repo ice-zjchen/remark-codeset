@@ -1,0 +1,15 @@
+{
+  "name": "remark-codeset",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ice-zjchen/remark-codeset.git",
+  "author": "ice-zjchen",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^3.16.4"
+  }
+}
