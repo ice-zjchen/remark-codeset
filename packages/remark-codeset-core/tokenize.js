@@ -1,3 +1,5 @@
+const visit = require('unist-util-visit');
+
 const tokenizeCodeSet = ({markdownAST, parser}) => {
     visit(markdownAST, 'code', (node, index, parent) => {
         if (node.lang === 'codeset') {
