@@ -5,7 +5,7 @@
 const parse = require('./parse');
 const tokenize = require('./tokenize');
 
-module.exports = ({markdownAST, parser}) => {
-    tokenize({markdownAST, parser});
-    parse(markdownAST);
+module.exports = {
+    tokenize,
+    parse
 };
