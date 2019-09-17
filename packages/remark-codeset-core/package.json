@@ -5,7 +5,6 @@
   "main": "index.js",
   "author": "ice-zjchen",
   "license": "MIT",
-  "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
