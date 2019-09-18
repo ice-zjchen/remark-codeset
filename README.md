@@ -8,9 +8,9 @@ Live demo: https://codepen.io/ice-zjchen/full/dybevYP
 
 This repository contains the following projects:
 
-- [`remark-codeset`](./packages/remark-codeset) a remark plugin in [unified](https://github.com/unifiedjs/unified) encosystem.
-- [`gatsby-remark-codeset`](./packages/gatsby-remark-codeset) a sub-plugin of [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) in gatsby.
-- [`remark-codeset-core`](./packages/remark-codeset-core) core libs including tokenize, parser, etc.
+- [`remark-codeset`](./packages/remark-codeset) A remark plugin used in the remark processor powered by [@unified](https://github.com/unifiedjs/unified) collective.
+- [`gatsby-remark-codeset`](./packages/gatsby-remark-codeset) A sub-plugin of [gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/) used in gatsby. More details about [gatsby plugins](https://www.gatsbyjs.org/packages/gatsby-remark-codeset/?=codeset)
+- [`remark-codeset-core`](./packages/remark-codeset-core) Core libs including tokenize, parser, etc.
 
 
 ## Syntax
