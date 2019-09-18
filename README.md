@@ -17,7 +17,7 @@ This repository contains the following projects:
 <pre>
 ~~~codeset
 ```html
-<div>Hello CodeSet</div>
+&lt;div&gt;Hello CodeSet&lt;/div&gt;
 ```
 
 ```css
