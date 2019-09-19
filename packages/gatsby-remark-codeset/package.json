@@ -1,6 +1,6 @@
 {
   "name": "gatsby-remark-codeset",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "repository": "https://github.com/ice-zjchen/remark-codeset.git",
   "main": "index.js",
   "author": "ice-zjchen",
@@ -13,7 +13,7 @@
   "description": "parse sets of code blocks in markdown and transform them to tablist",
   "license": "MIT",
   "dependencies": {
-    "remark-codeset-core": "^1.1.0"
+    "remark-codeset-core": "^1.1.1"
   },
   "peerDependencies": {
     "gatsby": "^2.15.16",
