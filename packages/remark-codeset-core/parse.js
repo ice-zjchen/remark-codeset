@@ -1,6 +1,7 @@
 const _ = require('lodash');
 const visit = require('unist-util-visit');
 const classnames = require('classnames');
+const queryString = require('query-string');
 
 const genCodeUid = (prefix, seq, name) => `${prefix}-${seq}-${name}`;
 
@@ -44,6 +45,8 @@ const createTabItemNode = codesetId => (code, index) => {
         'nav-link': true,
         'active': index === 0
     };
+    const meta = queryString.parse(code.meta);
+
     const linkNode = {
         type: 'element',
         tagName: 'a',
@@ -53,7 +56,7 @@ const createTabItemNode = codesetId => (code, index) => {
             href: `#${genCodeUid(codesetId, index, code.lang)}`
         },
         children: [{
-            type: 'text', value: code.lang
+            type: 'text', value: meta.label || code.lang
         }]
     };
 
