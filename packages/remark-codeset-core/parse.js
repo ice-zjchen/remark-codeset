@@ -24,7 +24,10 @@ const createPaneNode = codesetId => (code, index) => {
                 role: 'tabpanel',
             }
         },
-        children: [code]
+        children: [
+            // empty meta to support code-hight(prismjs)
+            {...code, meta: null}
+        ]
     });
 };
 
