@@ -6,6 +6,7 @@
   "author": "ice-zjchen",
   "license": "MIT",
   "dependencies": {
+    "remark": "^11.0.1",
     "remark-codeset-core": "^1.1.1",
     "remark-parse": "^7.0.1"
   }

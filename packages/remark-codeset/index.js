@@ -1,11 +1,11 @@
 const {tokenize, parse} = require('remark-codeset-core');
-const markdown = require('remark-parse');
+const remark = require('remark');
 
 module.exports = (options) => {
-    const parser = options.parser || markdown;
+    const parser = options && options.parser ? options.parser : remark();
 
-    return (tree, file) => {
-        tokenize({tree, parser});
-        parse(tree);
+    return (markdownAST, file) => {
+        tokenize({markdownAST, parser});
+        parse(markdownAST);
     };
 };
