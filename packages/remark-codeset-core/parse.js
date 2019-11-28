@@ -2,8 +2,11 @@ const _ = require('lodash');
 const visit = require('unist-util-visit');
 const classnames = require('classnames');
 const queryString = require('query-string');
+const remark = require('remark');
 
 const genCodeUid = (prefix, seq, name) => `${prefix}-${seq}-${name}`;
+
+const pickCodeList = codeList => _.filter(codeList, ({type}) => type === 'code');
 
 const createPaneNode = codesetId => (code, index) => {
     const className = {
@@ -48,7 +51,9 @@ const createTabItemNode = codesetId => (code, index) => {
         'nav-link': true,
         'active': index === 0
     };
-    const meta = queryString.parse(code.meta);
+
+    // decode=false, because it is not url
+    const meta = queryString.parse(code.meta, {decode: false});
 
     const linkNode = {
         type: 'element',
@@ -91,7 +96,10 @@ const parseCodeSet = markdownAST => {
 
     visit(markdownAST, 'codeset', (node, index, parent) => {
 
-        const codeList = node.children;
+        // deal with \u200b or not? maybe not
+        // const codeList = remark.parse(node.value.replace(/\u200b/g, '')).children;
+        const codeList = pickCodeList(node.children);
+
         const codesetId = `codeset-${count}`;
         const tabsNode = createTabListNode(codeList, codesetId);
         const panesNode = createPaneListNode(codeList, codesetId);
