@@ -6,7 +6,12 @@ const remark = require('remark');
 
 const genCodeUid = (prefix, seq, name) => `${prefix}-${seq}-${name}`;
 
-const pickCodeList = codeList => _.filter(codeList, ({type}) => type === 'code');
+const validateCodeList = codeList => {
+    const validCodeList = _.filter(codeList, ({type}) => type === 'code');
+    const error = validCodeList.length !== codeList.length;
+
+    return [validCodeList, error];
+};
 
 const createPaneNode = codesetId => (code, index) => {
     const className = {
@@ -96,9 +101,13 @@ const parseCodeSet = markdownAST => {
 
     visit(markdownAST, 'codeset', (node, index, parent) => {
 
-        // deal with \u200b or not? maybe not
-        // const codeList = remark.parse(node.value.replace(/\u200b/g, '')).children;
-        const codeList = pickCodeList(node.children);
+        // deal with \u200b or not? maybe not.
+        // stop parsing `codeset` if there are syntax errors inside
+        const [codeList, error] = validateCodeList(node.children);
+
+        if (error) {
+            return;
+        }
 
         const codesetId = `codeset-${count}`;
         const tabsNode = createTabListNode(codeList, codesetId);
