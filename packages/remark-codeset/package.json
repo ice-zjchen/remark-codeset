@@ -1,13 +1,13 @@
 {
   "name": "remark-codeset",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "repository": "https://github.com/ice-zjchen/remark-codeset.git",
   "main": "index.js",
   "author": "ice-zjchen",
   "license": "MIT",
   "dependencies": {
     "remark": "^11.0.1",
-    "remark-codeset-core": "^1.1.3",
+    "remark-codeset-core": "^1.1.4",
     "remark-parse": "^7.0.1"
   }
 }
